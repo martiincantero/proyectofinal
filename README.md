@@ -30,8 +30,9 @@ Esta versión de maqueta incluye:
 
 - **HTML5**: Estructura de las páginas.
 - **CSS3**: Diseño y estilos de la interfaz.
+- **JS**: Interactividad.
+
 
 ---
 
-## 📂 Estructura del Proyecto
 
