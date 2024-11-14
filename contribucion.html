@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribuir Recurso</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <script src="js/scripts.js"async></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contribucion">
+            <h2>Sube un nuevo recurso educativo</h2>
+            <form>
+                <label for="titulo">Título del Recurso</label>
+                <input type="text" id="titulo" required>
+
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" required></textarea>
+
+                <label for="nivel">Nivel Educativo</label>
+                <select id="nivel" required>
+                    <option value="primaria">Primaria</option>
+                    <option value="secundaria">Secundaria</option>
+                    <option value="universidad">Universidad</option>
+                </select>
+
+                <label for="tipo">Tipo de Recurso</label>
+                <select id="tipo" required>
+                    <option value="documento">Documento</option>
+                    <option value="video">Video</option>
+                </select>
+
+                <div class="container">
+                    <h1>Vista Previa de Archivos</h1>
+                    <input type="file" id="fileInput" accept="image/*, .pdf, .txt, .docx">
+                    <div id="preview" class="preview"></div>
+                </div>
+
+                <button type="submit">Subir Recurso</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portal Educativo. Todos los derechos reservados.</p>
+    </footer>
+    <script>document.getElementById('fileInput').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const previewContainer = document.getElementById('preview');
+    
+        // Limpiar contenido previo
+        previewContainer.innerHTML = '';
+    
+        if (file) {
+            const reader = new FileReader();
+    
+            // Si el archivo es una imagen
+            if (file.type.startsWith('image/')) {
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    previewContainer.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            }
+            // Si el archivo es un PDF
+            else if (file.type === 'application/pdf') {
+                const url = URL.createObjectURL(file);
+                const iframe = document.createElement('iframe');
+                iframe.src = url;
+                previewContainer.appendChild(iframe);
+            }
+            // Si el archivo es de texto
+            else if (file.type === 'text/plain') {
+                reader.onload = function(e) {
+                    const p = document.createElement('p');
+                    p.textContent = e.target.result;
+                    previewContainer.appendChild(p);
+                };
+                reader.readAsText(file);
+            }
+            // Si es otro tipo de archivo (por ejemplo, Word)
+            else {
+                const p = document.createElement('p');
+                p.textContent = "No se puede mostrar una vista previa para este tipo de archivo.";
+                previewContainer.appendChild(p);
+            }
+        }
+    });
+    </script>
+</body>
+</html>

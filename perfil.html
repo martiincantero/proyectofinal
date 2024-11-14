@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil del Usuario</title>
+    <link rel="stylesheet" href="css/style_login.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="biblioteca.html">Biblioteca</a></li>
+                <li><a href="logout.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="perfil">
+            <h2>Perfil del Usuario</h2>
+            <form action="ruta-al-servidor" method="POST">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" value="Nombre del Usuario" required>
+
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" value="usuario@correo.com" required>
+
+                <label for="nivel">Nivel Educativo</label>
+                <select id="nivel" name="nivel" required>
+                    <option value="primaria">Primaria</option>
+                    <option value="secundaria">Secundaria</option>
+                    <option value="universidad">Universidad</option>
+                </select>
+
+                <h2 class="h2_con">Cambiar Contraseña</h2>
+                <label for="password">Nueva Contraseña</label>
+                <input type="password" id="password" name="password" minlength="8">
+
+                <label for="confirm-password">Confirmar Contraseña</label>
+                <input type="password" id="confirm-password" name="confirm-password" minlength="8">
+
+                <button type="submit">Guardar Cambios</button>
+                <button type="button" onclick="window.location.href='logout.html'">Cerrar Sesión</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portal Educativo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

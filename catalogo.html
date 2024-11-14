@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Recursos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"async></script>
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="biblioteca.html">Biblioteca Personal</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <button id="toggleFiltro">Ocultar/Mostrar Filtro</button>
+    </header>
+
+    <main>
+        <section class="filtro" id="filtro">
+            <h2>Filtrar recursos</h2>
+            <form>
+                <label for="nivel">Nivel Educativo</label>
+                <select id="nivel">
+                    <option value="primaria">Primaria</option>
+                    <option value="secundaria">Secundaria</option>
+                    <option value="universidad">Universidad</option>
+                </select>
+
+                <label for="materia">Materia</label>
+                <select id="materia">
+                    <option value="matematicas">Matemáticas</option>
+                    <option value="historia">Historia</option>
+                    <option value="ciencias">Ciencias</option>
+                </select>
+
+                <label for="tipo">Tipo de Recurso</label>
+                <select id="tipo">
+                    <option value="documento">Documento</option>
+                    <option value="video">Video</option>
+                </select>
+
+                <label for="autor">Autor</label>
+                <input type="text" id="autor" placeholder="Nombre del autor">
+
+                <button type="submit">Filtrar</button>
+            </form>
+        </section>
+        <section class="recursos">
+            <h2>Añade un recurso</h2>
+            <a href="contribucion.html"><button id="addRecurso">Añade aquí tu recurso</button></a>
+        </section>
+
+        <section class="recursos">
+            <h1>Recursos Disponibles</h1> 
+            <div class="tarjetas">
+                <div class="container">
+                    <h1>Repaso Matemáticas 1 EP Santillana</h1>
+                    <iframe src="base_recursos/1 EP SANTILLANA MATEMATICAS REPASO 1.pdf"></iframe>
+                    <a href="EP_SANTILLANA_MATEMATICAS_REPASO_1.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Repaso Matemáticas 3 EP Santillana</h1>
+                    <iframe src="base_recursos/3 EP SANTILLANA MATEMATICAS REPASO.pdf"></iframe>
+                    <a href="EP_SANTILLANA_MATEMATICAS_REPASO_1.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>180 Problemas Matemáticos Desafiantes</h1>
+                    <iframe src="base_recursos/180 problemas.pdf"></iframe>
+                    <a href="180_problemas.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Guía Completa de Active Directory</h1>
+                    <iframe src="base_recursos/ACTIVE_DIRECTORY.pdf"></iframe>
+                    <a href="ACTIVE_DIRECTORY.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Ampliación Matemáticas 2 EP</h1>
+                    <iframe src="base_recursos/ampliacion_mates2.pdf"></iframe>
+                    <a href="ampliacion_mates2.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Ampliación Matemáticas 2 EP</h1>
+                    <iframe src="base_recursos/dc9dae21-cd75-4672-8a1e-1e3508e1a7f6.pdf"></iframe>
+                    <a href="dc9dae21-cd75-4672-8a1e-1e3508e1a7f6.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Matemáticas 2 EP - Curso 2023</h1>
+                    <iframe src="base_recursos/MAT2 2023.pdf"></iframe>
+                    <a href="MAT2_2023.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Matemáticas 3 EP - Curso 2023</h1>
+                    <iframe src="base_recursos/MAT3 2023.pdf"></iframe>
+                    <a href="MAT3_2023.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Matemáticas Básicas - Nivel 22</h1>
+                    <iframe src="base_recursos/matbasico22.pdf"></iframe>
+                    <a href="matbasico22.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Matemáticas 3 - Tomo 2</h1>
+                    <iframe src="base_recursos/matematica3_tomo2.pdf"></iframe>
+                    <a href="matematica3_tomo2.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Matemáticas 4 - Tomo 2</h1>
+                    <iframe src="base_recursos/matematica4_tomo2.pdf"></iframe>
+                    <a href="matematica4_tomo2.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Refuerzo y Ampliación de Matemáticas 4</h1>
+                    <iframe src="base_recursos/Mates4refampli.pdf"></iframe>
+                    <a href="Mates4refampli.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Matemáticas Avanzadas - Nivel 2</h1>
+                    <iframe src="base_recursos/matmat2.pdf"></iframe>
+                    <a href="matmat2.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Matemáticas - Nivel 5</h1>
+                    <iframe src="base_recursos/matmat5.pdf"></iframe>
+                    <a href="matmat5.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1> Matemáticas - Nivel 6</h1>
+                    <iframe src="base_recursos/matmat6.pdf"></iframe>
+                    <a href="matmat6.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Matemáticas - Nivel 9</h1>
+                    <iframe src="base_recursos/matmat9.pdf"></iframe>
+                    <a href="matmat9.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1> Matemáticas - Desafío 25</h1>
+                    <iframe src="base_recursos/matmat25.pdf"></iframe>
+                    <a href="matmat25.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Matemáticas - Nivel 28</h1>
+                    <iframe src="base_recursos/matmat28.pdf"></iframe>
+                    <a href="matmat28.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Matemáticas - Nivel 31</h1>
+                    <iframe src="base_recursos/matmat31.pdf"></iframe>
+                    <a href="matmat31.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Matemáticas - Nivel 48</h1>
+                    <iframe src="base_recursos/matmat40.pdf"></iframe>
+                    <a href="matmat40.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1> Matemáticas - Nivel 40</h1>
+                    <iframe src="base_recursos/matmat48.pdf"></iframe>
+                    <a href="matmat48.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1> Informe de Recursos Compartidos</h1>
+                    <iframe src="base_recursos/Recursos_Compartidos_Informe.pdf"></iframe>
+                    <a href="Recursos_Compartidos_Informe.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1>Refuerzo y Ampliación Matemáticas 4º EP</h1>
+                    <iframe src="base_recursos/refuerzo_ampliacion_mates_4.pdf"></iframe>
+                    <a href="refuerzo_ampliacion_mates_4.html"><p>Ver mas del recurso</p></a>
+                </div>
+                <div class="container">
+                    <h1> Repaso General de Matemáticas</h1>
+                    <iframe src="base_recursos/repaso_mates.pdf"></iframe>
+                    <a href="repaso_mates.html"><p>Ver mas del recurso</p></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portal Educativo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

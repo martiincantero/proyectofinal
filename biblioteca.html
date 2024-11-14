@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Biblioteca Personal</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="biblioteca.html">Biblioteca Personal</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="biblioteca">
+            <h2>Mi Biblioteca Personal</h2>
+
+            <div class="recursos-favoritos">
+                <h3>Recursos Favoritos</h3>
+                <div class="tarjetas">
+                    <div class="container">
+                        <h1>Recurso</h1>
+                        <iframe src="base_recursos/matmat9.pdf"></iframe>
+                        <a href="matmat9.html"><p>Ver mas del recurso</p></a>
+                    </div>
+                    <div class="container">
+                        <h1>Recurso </h1>
+                        <iframe src="base_recursos/ACTIVE_DIRECTORY.pdf"></iframe>
+                        <a href="ACTIVE_DIRECTORY.html"><p>Ver mas del recurso</p></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recursos-subidos">
+                <h3>Mis Recursos Subidos (Solo Profesores)</h3>
+                <div class="tarjetas">
+                    <div class="container">
+                        <h1>Recurso mas descargado</h1>
+                        <iframe src="base_recursos/matmat9.pdf"></iframe>
+                        <a href="matmat9.html"><p>Ver mas del recurso</p></a>
+                        <button>Editar</button>
+                        <button>Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portal Educativo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
